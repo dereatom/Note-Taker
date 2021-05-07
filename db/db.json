@@ -1,6 +1,27 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+  {
+    "id": 1,
+    "title": "test 123",
+    "text": "test 123"
+  },
+  {
+    "id": 2,
+    "title": "test 456",
+    "text": "456 test"
+  },
+  {
+    "id": 3,
+    "title": "Dereje notes",
+    "text": "I do my home work after work"
+  },
+  {
+    "id": 4,
+    "title": "My reading schedule",
+    "text": "From 8pm -10pm after assignment"
+  },
+  {
+    "id": 5,
+    "title": "fffffjjjjj",
+    "text": "ddddddddddddd"
+  }
 ]

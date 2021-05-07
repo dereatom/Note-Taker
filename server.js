@@ -14,18 +14,18 @@ app.use(express.static("public"));
 
 // Routes:
 // Basic route that sends the user to the index page
-app.get("/", function(req, res) {
+app.get("/", (req, res) =>{
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Basic route that sends the user to the notes page
-app.get("/notes", function(req, res) {
+app.get("/notes", (req, res) =>{
     res.sendFile(path.join(__dirname, 'public/notes.html'));
 });
 
 // Route that sends the user to the db.json file
-app.get("/api/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, 'db.json'));
+app.get("/api/notes", (req, res) =>{
+    res.sendFile(path.join(__dirname, '/db/db.json'));
 });
 
 // Takes a JSON input with keys "title" and "text" and adds a new note object with that message to the db.json file
@@ -35,22 +35,50 @@ app.post("/api/notes", function(req, res) {
             console.log(error);
         }
         const notes = JSON.parse(response);
+        //console.log(notes)
         const noteRequest = req.body;
+        //console.log(noteRequest);
         const newNoteId = notes.length + 1;
         const newNote = {
             id: newNoteId,
             title: noteRequest.title,
             text: noteRequest.text,
         };
+        console.log(newNote);
         notes.push(newNote);
         res.json(newNote);
-        fs.writeFile(path.join(__dirname, "db.json"), JSON.stringify(notes, null, 2), function(err) {
+        fs.writeFile(path.join(__dirname, "/db/db.json"), JSON.stringify(notes, null, 2), function(err) {
             if (err) throw err;
         });
     });
-});
 
+});
+app.delete("/api/notes/:id", function(req, res) {
+    const deleteId = req.params.id;
+    fs.readFile("db/db.json", "utf8", function(error, response) {
+        if (error) {
+            console.log(error);
+        }
+        let notes = JSON.parse(response);
+        if (deleteId <= notes.length) {
+        
+            res.json(notes.splice(deleteId-1,1));
+            // Reassign the ids of all notes
+            for (let i=0; i<notes.length; i++) {
+                notes[i].id = i+1;
+            }
+            fs.writeFile("db/db.json", JSON.stringify(notes, null, 2), function(err) {
+                if (err) throw err;
+            });
+        } else {
+            res.json(false);
+        }
+        
+
+    });
+    
+});
 // Starts the server to begin listening
 app.listen(PORT, () => {
-	console.log(`Server is listening on ${PORT}.`)
+	console.log(`App is listening ${PORT}.`)
 }); 
