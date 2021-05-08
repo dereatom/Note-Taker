@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "title": "test 123",
-    "text": "test 123"
+    "title": "My Monday study schedule",
+    "text": "6- 8pm reading basics\n8-10pm homework"
   },
   {
     "id": 2,
-    "title": "test 456",
-    "text": "456 test"
+    "title": "My Tuesday schedule",
+    "text": "6-10 Class"
   },
   {
     "id": 3,
-    "title": "Dereje notes",
-    "text": "I do my home work after work"
+    "title": "My Wednesday schedule",
+    "text": "6-8 watching class videos\n8-10 working on assignement\n"
   },
   {
     "id": 4,
-    "title": "My reading schedule",
-    "text": "From 8pm -10pm after assignment"
+    "title": "My Thursday schedule ",
+    "text": "6-10pm class"
   },
   {
     "id": 5,
-    "title": "fffffjjjjj",
-    "text": "ddddddddddddd"
+    "title": "My friday schedule",
+    "text": "6-8pm  Finalizing assignments \n8-10pm  preparation for the next class"
   }
 ]
