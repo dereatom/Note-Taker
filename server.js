@@ -10,17 +10,17 @@ const PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("Public"));
 
 // Routes:
 // Basic route that sends the user to the index page
 app.get("/", (req, res) =>{
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, 'Public/index.html'));
 });
 
 // Basic route that sends the user to the notes page
 app.get("/notes", (req, res) =>{
-    res.sendFile(path.join(__dirname, 'public/notes.html'));
+    res.sendFile(path.join(__dirname, 'Public/notes.html'));
 });
 
 // Route that sends the user to the db.json file
