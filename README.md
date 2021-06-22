@@ -25,7 +25,10 @@
   I WANT to be able to write and save notes. SO THAT I can organize my thoughts and keep track of tasks I need to complete.
 
   ## Links
-   [Screenshot1](https://drive.google.com/file/d/12W-hycJ2z2aLy7WqPM_qqUD1HiFoXaUc/view?usp=sharing) [Screenshot2](https://drive.google.com/file/d/1fvrJaKIv7mpxVW5xMSpSiFJ_XeurclbS/view?usp=sharing) [Screenshot3](https://drive.google.com/file/d/1bx5qB2xIHasHXiqlTehh791-riFBQV8c/view?usp=sharing) [Screenshot4](https://drive.google.com/file/d/1kWFUGRrpzj9sxMH8Nhe1XS9JKyk_r8tl/view?usp=sharing)
+![Capture1](https://user-images.githubusercontent.com/77940481/122939253-7ab5c580-d341-11eb-8573-72ff41731f84.jpg)
+![Capture2](https://user-images.githubusercontent.com/77940481/122939266-7db0b600-d341-11eb-8aec-a767c3eb0e77.jpg)
+![Capture3](https://user-images.githubusercontent.com/77940481/122939288-80aba680-d341-11eb-9109-00d9a589b85f.jpg)
+![Capture4](https://user-images.githubusercontent.com/77940481/122939294-830e0080-d341-11eb-9d27-692f527e8388.jpg)
   
   ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
