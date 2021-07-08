@@ -12,7 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("Public"));
 
-// Routes:
 // Basic route that sends the user to the index page
 app.get("/", (req, res) =>{
     res.sendFile(path.join(__dirname, 'Public/index.html'));
@@ -35,9 +34,7 @@ app.post("/api/notes", function(req, res) {
             console.log(error);
         }
         const notes = JSON.parse(response);
-        //console.log(notes)
         const noteRequest = req.body;
-        //console.log(noteRequest);
         const newNoteId = notes.length + 1;
         const newNote = {
             id: newNoteId,
@@ -73,10 +70,7 @@ app.delete("/api/notes/:id", function(req, res) {
         } else {
             res.json(false);
         }
-        
-
     });
-    
 });
 // Starts the server to begin listening
 app.listen(PORT, () => {
